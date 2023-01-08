@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bai Tap Ham</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div>
+      <h1>BC42 - Nguyen Cong Vinh</h1>
+      <!-- Tab items -->
+      <div class="tabs">
+        <div class="tab-item active">
+          <i class="fa-solid fa-book"></i>
+          Bài 1
+        </div>
+        <div class="tab-item">
+          <i class="fa-solid fa-book"></i>
+          Bài 2
+        </div>
+        <div class="tab-item">
+          <i class="fa-solid fa-book"></i>
+          Bài 3
+        </div>
+        <div class="tab-item">
+          <i class="fa-solid fa-book"></i>
+          Bài 4
+        </div>
+        <div class="tab-item">
+          <i class="fa-solid fa-book"></i>
+          Bài 5
+        </div>
+        <div class="tab-item">
+          <i class="fa-solid fa-book"></i>
+          Bài 6
+        </div>
+        <div class="tab-item">
+          <i class="fa-solid fa-book"></i>
+          Bài 7
+        </div>
+        <div class="line"></div>
+      </div>
+
+      <!-- Tab content -->
+      <div class="tab-content">
+        <div class="tab-pane active">
+          <i class="fa-solid fa-sack-dollar"></i><h2>Tìm số chẵn/lẻ nhỏ hơn 100</h2>
+          <form action="" class="row algin-item-center px-2">
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" onclick="timSoChanLe()">Xem kết quả</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult"></span>
+            </div>
+          </form>
+        </div>
+
+        <div class="tab-pane">
+          <i class="fa-solid fa-sack-dollar"></i><h2>Đếm số chia hết cho 3</h2>
+          <form action="" class="row algin-item-center px-2">
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" onclick="demSoChia3()">Xem kết quả</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult2"></span>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane">
+          <i class="fa-solid fa-dollar-sign"></i><h2>Tìm số nguyên dương nhỏ nhất</h2>
+          <form action="" class="row algin-item-center px-2 bai3">
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" id="btnTax"
+                onclick="timSoDuongNhoNhat()">Xem kết quả</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult3"></span>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane">
+          <i class="fa-solid fa-ruler"></i><h2>Tính tổng</h2>
+          <form action="" class="row algin-item-center px-2 bai4">
+            <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập x" value="num1"
+                id="inputNum1" class="formInput">
+            </div>
+            <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập n" value="num2"
+                id="inputNum2" class="formInput">
+            </div>
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" id="btnCal"
+                onclick="tinhTong()">Tính tổng</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult4"></span>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane">
+          <i class="fa-solid fa-ruler"></i><h2>Tính giai thừa</h2>
+          <form action="" class="row algin-item-center px-2 bai4">
+            <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập n" value="num3"
+                id="inputNum3" class="formInput">
+            </div>
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" id="btnCal"
+                onclick="tinhGiaiThua()">Tính</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult5"></span>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane">
+          <i class="fa-solid fa-ruler"></i><h2>Tính thẻ div</h2>
+          <form action="" class="row algin-item-center px-2 bai4">
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" id="btnCal"
+                onclick="addDivTag()">Tạo thẻ</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult6"></span>
+            </div>
+          </form>
+        </div>
+        <div class="tab-pane">
+          <i class="fa-solid fa-ruler"></i><h2>In số nguyên tố</h2>
+          <form action="" class="row algin-item-center px-2 bai4">
+            <div class="col-12 col-lg-4">
+              <input type="number" placeholder="Nhập n" value="num4"
+                id="inputNum4" class="formInput">
+            </div>
+            <div class="col-12">
+              <button class="btn mb-4 mt-4" type="button" id="btnCal"
+                onclick="inSoNguyenTo()">In số</button>
+            </div>
+            <div class="alert alert-success" role="alert">
+              👉<span id="txtResult7"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
